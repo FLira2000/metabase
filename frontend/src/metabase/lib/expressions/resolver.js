@@ -62,7 +62,7 @@ export function resolve(expression, type, fn) {
         resolve(val, type, fn),
       ]);
 
-      if (options && options.default) {
+      if (options && Object.hasOwn(options, "default")) {
         const resolvedOptions = {
           default: resolve(options.default, type, fn),
         };
